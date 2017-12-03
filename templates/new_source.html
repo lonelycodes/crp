@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>SwissAL - Sources</title>
+  <!-- Bootstrap core CSS-->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="static/css/sb-admin.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/vendor/highlight/styles/monokai.css">
+  <script src="static/vendor/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+{% include 'navbar.html' %}
+
+<div class="content-wrapper">
+<div class="container-fluid">
+
+<div class="row">
+  <div class="col-sm-12">
+        <h1>Add Source</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    	<form class="form-inline">
+	  <div class="form-group"> 
+	    <label for="srcname" style="margin-right:4px;">Name</label>
+	    <input type="text" class="form-control" id="srcname" name="srcname" style="margin-right:4px;">
+	  </div>
+          <div class="form-group">
+            <label for="srcdomain" style="margin-right:4px;">Domain Name</label>
+            <input type="text" class="form-control" id="srcdomain" name="srcdomain">
+          </div>
+	  <input id="loadPreview" type="submit" value="Preview" style="margin-left:4px;">
+        </form>
+  </div> 
+</div>
+
+<div class="row" style="margin-top: 10px;">
+ <div class="col-sm-12">
+   <h2>Page Samples</h2>
+ </div>
+</div>
+
+<div class="row">
+ <div class ="col-sm-2"></div>
+ <div class="col-sm-8"> 
+   <ul class="nav nav-pills">
+     <li class="active"><a data-toggle="pill" href="#page1">Page 1</a></li>
+     <li><a data-toggle="pill" href="#page2">Page 2</a></li>
+     <li><a data-toggle="pill" href="#page3">Page 3</a></li>
+     <li><a data-toggle="pill" href="#page4">Page 4</a></li>
+     <li><a data-toggle="pill" href="#page5">Page 5</a></li>
+     <li><a data-toggle="pill" href="#page6">Page 6</a></li>
+     <li><a data-toggle="pill" href="#page7">Page 7</a></li>
+     <li><a data-toggle="pill" href="#page8">Page 8</a></li>
+     <li><a data-toggle="pill" href="#page9">Page 9</a></li>
+     <li><a data-toggle="pill" href="#page10">Page 10</a></li>
+   </ul>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-sm-12">
+   <div class="tab-content">
+<div id="page1" class="tab-pane fade in active">
+       <div class="row">
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <iframe id="preview_iframe_1"></iframe>
+	</div>
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">Code Preview</h4>
+	      <ul class="list-inline panel-actions">
+	        <li><a href="#" id="panel-fullscreen1" role="button" title="Toggle fullscreen"><i class="fa fa-expand"l></i></a></li>
+	      </ul>
+            </div>
+	    <div class="panel-body">
+              <pre><code class="html" id="preview_code_1">No HTML Preview</code></pre>
+	    </div>
+          </div>
+	</div>
+       </div>
+     </div>
+<div id="page2" class="tab-pane fade in">
+       <div class="row">
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <iframe id="preview_iframe_2"></iframe>
+	</div>
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">Code Preview</h4>
+	      <ul class="list-inline panel-actions">
+	        <li><a href="#" id="panel-fullscreen2" role="button" title="Toggle fullscreen"><i class="fa fa-expand"l></i></a></li>
+	      </ul>
+            </div>
+	    <div class="panel-body">
+              <pre><code class="html" id="preview_code_2">No HTML Preview</code></pre>
+	    </div>
+          </div>
+	</div>
+       </div>
+     </div>
+<div id="page3" class="tab-pane fade in">
+       <div class="row">
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <iframe id="preview_iframe_3"></iframe>
+	</div>
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">Code Preview</h4>
+	      <ul class="list-inline panel-actions">
+	        <li><a href="#" id="panel-fullscreen3" role="button" title="Toggle fullscreen"><i class="fa fa-expand"l></i></a></li>
+	      </ul>
+            </div>
+	    <div class="panel-body">
+              <pre><code class="html" id="preview_code_3">No HTML Preview</code></pre>
+	    </div>
+          </div>
+	</div>
+       </div>
+     </div>
+<div id="page4" class="tab-pane fade in">
+       <div class="row">
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <iframe id="preview_iframe_4"></iframe>
+	</div>
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">Code Preview</h4>
+	      <ul class="list-inline panel-actions">
+	        <li><a href="#" id="panel-fullscreen4" role="button" title="Toggle fullscreen"><i class="fa fa-expand"l></i></a></li>
+	      </ul>
+            </div>
+	    <div class="panel-body">
+              <pre><code class="html" id="preview_code_4">No HTML Preview</code></pre>
+	    </div>
+          </div>
+	</div>
+       </div>
+     </div>
+<div id="page5" class="tab-pane fade in">
+       <div class="row">
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <iframe id="preview_iframe_5"></iframe>
+	</div>
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">Code Preview</h4>
+	      <ul class="list-inline panel-actions">
+	        <li><a href="#" id="panel-fullscreen5" role="button" title="Toggle fullscreen"><i class="fa fa-expand"l></i></a></li>
+	      </ul>
+            </div>
+	    <div class="panel-body">
+              <pre><code class="html" id="preview_code_5">No HTML Preview</code></pre>
+	    </div>
+          </div>
+	</div>
+       </div>
+     </div>
+<div id="page6" class="tab-pane fade in">
+       <div class="row">
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <iframe id="preview_iframe_6"></iframe>
+	</div>
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">Code Preview</h4>
+	      <ul class="list-inline panel-actions">
+	        <li><a href="#" id="panel-fullscreen6" role="button" title="Toggle fullscreen"><i class="fa fa-expand"l></i></a></li>
+	      </ul>
+            </div>
+	    <div class="panel-body">
+              <pre><code class="html" id="preview_code_6">No HTML Preview</code></pre>
+	    </div>
+          </div>
+	</div>
+       </div>
+     </div>
+<div id="page7" class="tab-pane fade in">
+       <div class="row">
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <iframe id="preview_iframe_7"></iframe>
+	</div>
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">Code Preview</h4>
+	      <ul class="list-inline panel-actions">
+	        <li><a href="#" id="panel-fullscreen7" role="button" title="Toggle fullscreen"><i class="fa fa-expand"l></i></a></li>
+	      </ul>
+            </div>
+	    <div class="panel-body">
+              <pre><code class="html" id="preview_code_7">No HTML Preview</code></pre>
+	    </div>
+          </div>
+	</div>
+       </div>
+     </div>
+<div id="page8" class="tab-pane fade in">
+       <div class="row">
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <iframe id="preview_iframe_8"></iframe>
+	</div>
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">Code Preview</h4>
+	      <ul class="list-inline panel-actions">
+	        <li><a href="#" id="panel-fullscreen8" role="button" title="Toggle fullscreen"><i class="fa fa-expand"l></i></a></li>
+	      </ul>
+            </div>
+	    <div class="panel-body">
+              <pre><code class="html" id="preview_code_8">No HTML Preview</code></pre>
+	    </div>
+          </div>
+	</div>
+       </div>
+     </div>
+<div id="page9" class="tab-pane fade in">
+       <div class="row">
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <iframe id="preview_iframe_9"></iframe>
+	</div>
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">Code Preview</h4>
+	      <ul class="list-inline panel-actions">
+	        <li><a href="#" id="panel-fullscreen9" role="button" title="Toggle fullscreen"><i class="fa fa-expand"l></i></a></li>
+	      </ul>
+            </div>
+	    <div class="panel-body">
+              <pre><code class="html" id="preview_code_9">No HTML Preview</code></pre>
+	    </div>
+          </div>
+	</div>
+       </div>
+     </div>
+<div id="page10" class="tab-pane fade in">
+       <div class="row">
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <iframe id="preview_iframe_10"></iframe>
+	</div>
+	<div class="col-sm-6" style="overflow-y: scroll; height: 30em;">
+         <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">Code Preview</h4>
+	      <ul class="list-inline panel-actions">
+	        <li><a href="#" id="panel-fullscreen10" role="button" title="Toggle fullscreen"><i class="fa fa-expand"l></i></a></li>
+	      </ul>
+            </div>
+	    <div class="panel-body">
+              <pre><code class="html" id="preview_code_10">No HTML Preview</code></pre>
+	    </div>
+          </div>
+	</div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-6">
+    	<form class="form-horizontal">
+	  <div class="form-group"> 
+	    <label for="xp_title" style="margin-right:4px;">XPath Title</label>
+	    <input type="text" class="form-control" id="xp_title" style="margin-right:4px;">
+	  </div>
+	  <div class="form-group"> 
+	    <label for="xp_lead" style="margin-right:4px;">XPath Lead</label>
+	    <input type="text" class="form-control" id="xp_lead" style="margin-right:4px;">
+	  </div>
+          <div class="form-group">
+            <label for="xp_content" style="margin-right:4px;">XPath Content</label>
+            <input type="text" class="form-control" id="xp_content" name="xp_content">
+          </div>
+          <div class="form-group">
+            <label for="xp_date" style="margin-right:4px;">XPath Date</label>
+            <input type="text" class="form-control" id="xp_date" name="xp_date">
+          </div>
+          <div class="form-group">
+            <label for="xp_author" style="margin-right:4px;">XPath Author</label>
+            <input type="text" class="form-control" id="xp_author" name="xp_author">
+          </div>
+          <div class="form-group">
+            <label for="xp_keywords" style="margin-right:4px;">XPath Keywords</label>
+            <input type="text" class="form-control" id="xp_keywords" name="xp_keywords">
+          </div>
+        </form>
+  </div> 
+  <div class="col-sm-6">
+    	<form class="form-horizontal">
+	  <div class="form-group"> 
+	    <label for="f" style="margin-right:4px;">Format Title</label>
+	    <input type="text" class="form-control" id="f_title" style="margin-right:4px;">
+	  </div>
+	  <div class="form-group"> 
+	    <label for="f_lead" style="margin-right:4px;">Format Lead</label>
+	    <input type="text" class="form-control" id="f_lead" style="margin-right:4px;">
+	  </div>
+          <div class="form-group">
+            <label for="f_content" style="margin-right:4px;">Format Content</label>
+            <input type="text" class="form-control" id="f_content" name="f_content">
+          </div>
+	  <div class="form-group">
+            <label for="f_date" style="margin-right:4px;">Format Date</label>
+            <input type="text" class="form-control" id="f_date" name="f_date">
+          </div>
+          <div class="form-group">
+            <label for="f_author" style="margin-right:4px;">Format Author</label>
+            <input type="text" class="form-control" id="f_author" name="f_author">
+          </div>
+          <div class="form-group">
+            <label for="f_keywords" style="margin-right:4px;">Format Keywords</label>
+            <input type="text" class="form-control" id="f_keywords" name="f_keywords">
+          </div>
+        </form>
+  </div>
+</div>
+
+<div vlass="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <button type="button" class="btn btn-info btn-lg" id="scraperPreviewBtn">Show Preview</button>
+  </div>
+  <div class="col-sm-6 col-sm-offset-3">
+    <button type="button" class="btn btn-info btn-lg" id="scraperSaveBtn">Save Source</button>
+  </div>
+
+</div>
+
+    <div class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="previewModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title" id="mod_title"></h3>
+            </div>
+            <div class="modal-body">
+             	    <h4 class="modal-title" id="mod_lead"></h4>
+		    <p id="mod_content"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div> <!-- container-fluid -->
+
+<footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © Your Website 2017</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/jquery/jquery.xpath.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="static/js/sb-admin.min.js"></script>
+    <script type=text/javascript>
+	$(function() {
+		$('#loadPreview').bind('click', function() {
+			$.getJSON('/load_preview', {dname: $('input[name="srcdomain"]').val()},
+					function(data) {
+						console.log(data);
+						if (data == {}) {
+							toastr.warning("No Preview Available");
+						}
+						for (i=1; i<=10; i++){
+							$('#preview_code_'+i).text(data.page[i-1]);
+							$('#preview_iframe_'+i).attr({"src": 'data:text/html,' + escape(data.page[i-1]), "width": "100%", "height" :"100%"});
+						}
+						$('code').each(function(i, block) { hljs.highlightBlock(block); });
+
+			});
+			return false;
+		});
+	});
+    </script>
+    <script type=text/javascript>
+	$(document).ready(function() {
+		$('#scraperPreviewBtn').bind('click', function() {
+			var doc = $.parseHTML($("div.active").find('code')[0].innerText);
+			var xp_title = $('input[id="xp_title"]').val();
+			var xp_lead = $('input[id="xp_lead"]').val();
+			var xp_content = $('input[id="xp_content"]').val();
+
+			$('#mod_title').text($(doc).xpath(xp_title)[0].wholeText);
+			$('#mod_lead').text($(doc).xpath(xp_lead)[0].wholeText);
+			var content = "";
+			$(doc).xpath(xp_content).each(function (i, b) {content+=b.wholeText;});
+			$('#mod_content').text(content);
+			$('#previewModal').modal('show');
+			return false;
+		});
+	});
+    </script>
+    <script type=text/javascript>
+	$(document).ready(function() {
+		$('#scraperSaveBtn').bind('click', function() {
+		 	var name = $('input[name="srcname"]').val();
+			var dname = $('input[name="srcdomain"]').val();
+			
+			var xp_title = $('input[id="xp_title"]').val();
+			var xp_lead = $('input[id="xp_lead"]').val();
+			var xp_content = $('input[id="xp_content"]').val();
+			var xp_date = $('input[id="xp_date"]').val();
+			var xp_author = $('input[id="xp_author"]').val();
+			var xp_keywords = $('input[id="xp_keywords]').val();
+
+			var f_title = $('input[id="f_title"]').val();
+			var f_lead = $('input[id="f_lead"]').val();
+			var f_content = $('input[id="f_content"]').val();
+			var f_date = $('input[id="f_date"]').val();
+			var f_author = $('input[id="f_author"]').val();
+			var f_keywords = $('input[id="f_keywords]').val();
+
+			$.getJSON('/save_source', {name: name, dname: dname, xp_title: xp_title, xp_lead: xp_lead, xp_content: xp_content, xp_date: xp_date, xp_author: xp_author, xp_keywords: xp_keywords, f_title: f_title, f_lead: f_lead, f_content: f_content, f_date: f_date, f_author: f_author, f_keywords: f_keywords}, function(data) {
+		console.log("source saved");
+			});
+			return false;
+		});
+	});
+    </script>
+    <script>
+    $(document).ready(function () {
+    //Toggle fullscreen
+	    $("#panel-fullscreen1, #panel-fullscreen2, #panel-fullscreen3, #panel-fullscreen4, #panel-fullscreen5, #panel-fullscreen6, #panel-fullscreen7, #panel-fullscreen8, #panel-fullscreen9, #panel-fullscreen10").click(function (e) {
+	            e.preventDefault();
+		    var $this = $(this);
+		    if ($this.children('i').hasClass('fa fa-expand')){
+			$this.children('i').removeClass('fa fa-expand');
+			$this.children('i').addClass('fa fa-compress');
+			$this.children('i').css('color', 'black');
+			$this.children('h4').css('background-color', 'black');
+
+		    } else if ($this.children('i').hasClass('fa fa-compress')) {
+			$this.children('i').removeClass('fa fa-compress');
+			$this.children('i').addClass('fa fa-compress');
+			$this.children('i').css('color', 'white');
+			$this.children('h4').css('background-color', 'white');
+
+		    }
+		    $(this).closest('.panel').toggleClass('panel-fullscreen');
+	});
+    });
+    </script>
+    <style>
+	.panel-actions {
+	  margin-top: -20px;
+	  margin-bottom: 0;
+	  text-align: right;
+	}
+	.panel-actions a {
+	  color:#333;
+	}
+	.panel-fullscreen {
+	  display: block;
+	  z-index: 9999;
+	  position: fixed;
+	  width: 100%;
+	  height: 100%;
+  	  top: 0;
+  	  right: 0;
+	  left: 0;
+	  bottom: 0;
+	  overflow: auto;
+	}
+    </style>
+
+</div> <!-- content-wrapper-->
+</body>
+
+</html>
