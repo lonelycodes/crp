@@ -1,4 +1,4 @@
-from database import Base
+from database.database import Base
 from flask_security import UserMixin, RoleMixin
 from sqlalchemy import create_engine
 from sqlalchemy.orm import relationship, backref
@@ -93,7 +93,7 @@ class Text(Base):
     url = Column(String(256))
     title = Column(String(128))
     lead = Column(String(512), default='')
-    content = Column(String(8192))
+    content = Column(String(20000))
     date = Column(String(128))
     author = Column(String(128))
     keywords = Column(String(128))

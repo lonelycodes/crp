@@ -4,7 +4,6 @@ import datetime
 import sys,imp
 import scrapy
 import cgi
-import html.parser
 from database.database import db_session
 from database.models import Text, Source
 from multiprocessing import Process, Queue
@@ -103,13 +102,15 @@ def crawl_scrape(domain_name):
     a.crawling = True
     db_session.add(a)
     db_session.commit()
-    proc = CrawlerProcess({
+    proc= CrawlerProcess({
                 'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)',
-                'CLOSESPIDER_PAGECOUNT': 1024
+                'CLOSESPIDER_PAGECOUNT': 20
     })
 
     proc.crawl(MainSpider, dname=domain_name, xp_title=xptitle, xp_lead=xplead, xp_content=xpcontent, xp_date=xpdate, xp_author=xpauthor, xp_keywords=xpkeywords, f_title=ftitle, f_lead=flead, f_content=fcontent, f_date=fdate, f_author=fauthor, f_keywords=fkeywords)
-    proc.start()
+    proc.start(stop_after_crawl=True)
+    #d.addBoth(lambda _: reactor.stop())
+    #reactor.run()
     all_texts = db_session.query(Text).filter(Text.source==domain_name.split('.')[0]).all()
     c = 0
     for t in stored:

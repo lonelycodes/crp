@@ -140,7 +140,6 @@ def save_source():
     f_date = request.args.get('f_date', default='', type=str)
     f_author = request.args.get('f_author', default='', type=str)
     f_keywords = request.args.get('f_keywords', default='', type=str)
-    print current_user.username
     try:
         src = Source(name=name, domain=dname, xp_title=xp_title, xp_lead=xp_lead, xp_content=xp_content, xp_date=xp_date, xp_author=xp_author, xp_keywords=xp_keywords, f_title=f_title, f_lead=f_lead, f_content=f_content, f_date=f_date, f_author=f_author, f_keywords=f_keywords)
         db_session.add(src)

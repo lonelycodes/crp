@@ -1,6 +1,5 @@
 import scrapy
 import cgi
-import html.parser
 from multiprocessing import Process, Queue
 from scrapy.exceptions import CloseSpider
 from scrapy.spiders import CrawlSpider, Rule
