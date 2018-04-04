@@ -40,7 +40,6 @@ celery = make_celery(app)
 user_datastore = SQLAlchemySessionUserDatastore(db_session, User, Role)
 security = Security(app, user_datastore)
 
-# Create a user to test with
 @app.before_first_request
 def before_first_request():
     init_db()
