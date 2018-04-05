@@ -3,8 +3,10 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, PickleType
 
-engine = create_engine('postgresql://swissal:swissal@localhost:5432/swissal_database', \
-                       convert_unicode=True)
+# engine = create_engine('postgresql://swissal:swissal@localhost:5432/swissal_database', \
+#                       convert_unicode=True)
+engine = create_engine('sqlite:///crp.db')
+
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
                                          bind=engine))

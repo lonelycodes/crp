@@ -70,6 +70,7 @@ def main():
     all_texts = db_session.query(Text).filter(Text.ftype=='pdf').all()
     for at in all_texts:
         overview['num_pdf_tokens'] += at.num_token
+    
     overview['num_de'] = len(db_session.query(Text).filter(Text.lang=='de').all())
     overview['num_fr'] = len(db_session.query(Text).filter(Text.lang=='fr').all())
     overview['num_it'] = len(db_session.query(Text).filter(Text.lang=='it').all())
@@ -77,7 +78,12 @@ def main():
 
     slogs = db_session.query(SourceLog).all()
     for s in slogs:
-        overview['srclogs'].append({"username":s.username, "srcname": s.srcname, "timestamp":s.timestamp})
+        overview['srclogs'].append(
+            {"username":s.username,
+             "srcname":
+             s.srcname, 
+             "timestamp":s.timestamp})
+
     return render_template('index.html', overview=overview)
 
 @app.route('/load_overview')
@@ -95,6 +101,7 @@ def sources():
         elem['name'] = a.name
         elem['crawling'] = a.crawling
         elem['dname'] = a.domain
+        elem['id'] = a.id
         elem['num_tok_pdf'] = str(a.num_token_pdf)
         elem['num_tok_html'] = str(a.num_token_html)
         elem['num_files_pdf'] = str(a.num_files_pdf)
@@ -148,22 +155,14 @@ def save_source():
     except:
         return "error"
     return "saved"
+    
 
 @app.route('/start_source')
-#@login_required
+@login_required
 def start_source():
-    dname = request.args.get('dname', default='', type=str)
-    t = task_source.delay(dname)
+    src_id = request.args.get('src_id', default='', type=str)
+    t = task_source.delay(src_id)
     return "done"
-
-
-@celery.task()
-def task_source(dname):
-    from celery import current_task
-    import os
-    import subprocess
-    with app.app_context():
-        crawl_scrape(dname)
 
 
 @app.route('/admin')
@@ -171,11 +170,22 @@ def task_source(dname):
 def admin():
     return render_template('admin.html')
 
+
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('login'))
+
+
+@celery.task()
+def task_source(src_id):
+    from celery import current_task
+    import os
+    import subprocess
+    with app.app_context():
+        crawl_scrape(src_id)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5002)

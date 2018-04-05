@@ -89,7 +89,7 @@ class Actor(Base):
 class Text(Base):
     __tablename__ = 'text'
     id = Column(Integer, primary_key=True)
-    source = Column(String(128))
+    src_id = Column(Integer, ForeignKey('source.id'))
     url = Column(String(256))
     title = Column(String(128))
     lead = Column(String(512), default='')
