@@ -106,7 +106,7 @@ def crawl_scrape(src_id):
     })
 
     proc.crawl(MainSpider, xp, f, util)
-    proc.start(stop_after_crawl=True)
+    proc.start(stop_after_crawl=False)
     #d.addBoth(lambda _: reactor.stop())
     #reactor.run()
     current_texts = db_session.query(Text).filter(Text.src_id==src_id).all()

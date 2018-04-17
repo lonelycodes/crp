@@ -25,18 +25,12 @@ def make_celery(app):
     return celery
 
 app = Flask(__name__)
-app.config['DEBUG'] = False
-app.config['SECRET_KEY'] = 'super-secret'
-app.config['SECURITY_PASSWORD_SALT'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-app.config['SECURITY_PASSWORD_HASH'] = 'pbkdf2_sha512'
-app.config['SECURITY_LOGIN_USER_TEMPLATE'] = 'login.html'
-app.config['CELERY_BROKER_URL'] = 'amqp://swissal:password@localhost:5672/swissalvhost'
-app.config['CELERY_RESULT_BACKEND'] = 'database'
-app.config['CELERY_RESULT_DBURI'] = 'sqlite:///tmp_celery.db'
-app.config['CELERY_IMPORTS'] = ['__main__']
+app.config.from_pyfile('crp.cfg')
+
+# setup celery
 celery = make_celery(app)
 
-# Setup Flask-Security
+# setup flask-security
 user_datastore = SQLAlchemySessionUserDatastore(db_session, User, Role)
 security = Security(app, user_datastore)
 
@@ -56,6 +50,7 @@ def before_first_request():
     user_datastore.add_role_to_user('operator@operator.com', 'operator')
     db_session.commit()
 
+''' TODO move routes to blueprints'''
 @app.route('/')
 @login_required
 def main():
